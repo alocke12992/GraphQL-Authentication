@@ -1,6 +1,4 @@
-#endpoint: ''
-#endpoint: ''
-endpoint: https://eu1.prisma.sh/andrew-locke-cb5605/graphQlAuth/dev
+endpoint: ''
 datamodel: datamodel.prisma
 generate:
   - generator: javascript-client
