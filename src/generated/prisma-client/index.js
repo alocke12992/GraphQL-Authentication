@@ -5,10 +5,6 @@ var typeDefs = require("./prisma-schema").typeDefs;
 
 var models = [
   {
-    name: "Link",
-    embedded: false
-  },
-  {
     name: "User",
     embedded: false
   }
@@ -16,6 +12,6 @@ var models = [
 exports.Prisma = prisma_lib_1.makePrismaClientClass({
   typeDefs,
   models,
-  endpoint: `https://eu1.prisma.sh/andrew-locke-cb5605/hackerNewsDemo/dev`
+  endpoint: `https://eu1.prisma.sh/andrew-locke-cb5605/graphQlAuth/dev`
 });
 exports.prisma = new exports.Prisma();

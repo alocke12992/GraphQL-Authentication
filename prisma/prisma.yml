@@ -1,5 +1,6 @@
 #endpoint: ''
-endpoint: https://eu1.prisma.sh/andrew-locke-cb5605/hackerNewsDemo/dev
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/andrew-locke-cb5605/graphQlAuth/dev
 datamodel: datamodel.prisma
 generate:
   - generator: javascript-client
