@@ -1,7 +1,3 @@
-<style>
-.code { column-count: 2 };
-</style>
-
 # GraphQL Authentication with Node.js and Prisma
 This simple plug an play starter project will get you up and running with authentication using GraphQL in minutes. This project uses graphql-yoga and Prisma to implement authentication. 
 
@@ -54,7 +50,7 @@ Once you have started your server, you can access the GraphQL playground at [htt
 ## Example Queries
 
 ### Signup
-<div class="code">
+
 ```bash
 mutation {
 	signup(
@@ -71,4 +67,3 @@ mutation {
   }
 }
 ```
-</div>
