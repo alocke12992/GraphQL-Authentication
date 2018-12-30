@@ -1,10 +1,9 @@
 # GraphQL Authentication with Node.js and Prisma
 This simple plug an play starter project will get you up and running with authentication using GraphQL in minutes. This project uses graphql-yoga and Prisma to implement authentication. 
 
-## Building a GraphQL Server with Node.js & Prisma Tutorial
 This authentication was built using a tutorial taken from the [How to graphQL website.](https://www.howtographql.com/graphql-js/0-introduction/)
 
-You can visit the website to learn how to build a GraphQL server with graphql-yoga, Node.js & Prisma and best practices for authentication, filtering, pagination and subscriptions.
+You can visit the website to learn how to build a GraphQL server with graphql-yoga, Node.js & [Prisma](https://github.com/prisma/prisma/blob/master/docs/1.14/04-Reference/09-Upgrade-Guides/01-Graphcool-to-Prisma/03-Authentication-%26-Authorization.md) and best practices for authentication, filtering, pagination and subscriptions.
 
 ## Overview
 
