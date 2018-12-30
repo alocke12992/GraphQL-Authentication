@@ -1,3 +1,7 @@
+<style>
+.code { column-count: 2 };
+</style>
+
 # GraphQL Authentication with Node.js and Prisma
 This simple plug an play starter project will get you up and running with authentication using GraphQL in minutes. This project uses graphql-yoga and Prisma to implement authentication. 
 
@@ -19,19 +23,52 @@ This project uses the following technologies:
   * ... provides an editor where you can write queries, mutations & subscriptions, with auto-completion(!) and syntax highlighting.
   * ... lets you easily share your API operations.
 
-## Database Layer
+## Get started
 
+To get the project up and running, clone or download [this repository.](https://github.com/alocke12992/GraphQL-Authentication)
+
+`cd` into `GraphQL-Authentication` and run `yarn` or `npm init` to install the required dependencies.
+
+### Environment Variables
+Since this project uses json-webtokens to facilitate authentication, you will need to include an application secret which will be used during the authentication flow to authenticate a user. 
+
+To get started, create a new `.env` file in your root directory, then add the following to it:
+
+```bash
+APP_SECRET="YOUR APP SECRET GOES HERE"
+```
+
+*Checkout `.env_example` to see an example of how to create your `.env`*
+
+### Prisma Setup
 The database layer is powered by [Prisma](https://www.prisma.io/) and is connected to the GraphQL server via the [Prisma client](https://www.prisma.io/docs/prisma-client). 
 
 To learn more about setup, please read the [Prisma documentation ](https://www.prisma.io/docs/1.23/get-started/01-setting-up-prisma-demo-server-JAVASCRIPT-a001/) or check out this page from the [How to GraphQL website](https://www.howtographql.com/graphql-js/4-adding-a-database/). 
 
+### Run the server
 
-## Get started
-
-To get the project up and running, clone or download [this repository.](https://github.com/alocke12992/graphQL_HackerNews)
-
-`cd` into `graphQL_HackerNews` and run `yarn` or `npm init` to install the required dependencies.
-
-To run the server, type `yarn start` while in the root directory of the project.
+To run the server, type `yarn start` or `npm start` while in the root directory of the project.
 
 Once you have started your server, you can access the GraphQL playground at [http://localhost:4000](http://localhost:4000)
+
+## Example Queries
+
+### Signup
+<div class="code">
+```bash
+mutation {
+	signup(
+    name:"USERNAME",
+    email:"exampleEmail@email.com",
+    password:"password"
+  ){
+    token
+    user {
+      id
+      name
+      email
+    }
+  }
+}
+```
+</div>
