@@ -1,0 +1,9 @@
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/andrew-locke-cb5605/hackerNewsDemo/dev
+datamodel: datamodel.prisma
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
+hooks:
+  post-deploy:
+    - prisma generate
