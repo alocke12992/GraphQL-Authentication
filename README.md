@@ -51,7 +51,9 @@ Once you have started your server, you can access the GraphQL playground at [htt
 
 ### Signup
 
-```bash
+#### Query
+
+```js
 mutation {
 	signup(
     name:"USERNAME",
@@ -63,6 +65,61 @@ mutation {
       id
       name
       email
+    }
+  }
+}
+```
+
+#### Response 
+
+```json
+{
+  "data": {
+    "signup": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjanFiOHZvaDFhaXJhMGE1NW9zamQyNmE5IiwiaWF0IjoxNTQ2MTk1NTAxfQ.a76tyWGcf90HuNjJeHMvXFiBNS1ZhlyUuIJApIefpVg",
+      "user": {
+        "id": "cjqb8voh1aira0a55osjd26a9",
+        "name": "USERNAME",
+        "email": "exampleEmail@email.com"
+      }
+    }
+  }
+}
+```
+
+### Login
+
+Prior to executing the Login Query, you must set the HTTP HEADER with the token granted during signup: 
+
+#### HTTP HEADERS
+
+```json
+{
+  "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjanFiOHZvaDFhaXJhMGE1NW9zamQyNmE5IiwiaWF0IjoxNTQ2MTk1NTAxfQ.a76tyWGcf90HuNjJeHMvXFiBNS1ZhlyUuIJApIefpVg"
+}
+```
+#### Query
+
+```js
+mutation {
+  login(email:"exampleEmail@email.com", password:"password"){
+    user {
+      name
+      email
+    }
+  }
+}
+```
+
+#### Response
+```json
+{
+  "data": {
+    "login": {
+      "user": {
+        "name": "USERNAME",
+        "email": "exampleEmail@email.com"
+      }
     }
   }
 }
