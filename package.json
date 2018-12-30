@@ -1,6 +1,8 @@
 {
-  "name": "hackerNewsQL",
+  "name": "GraphQL Authentication",
   "version": "1.0.0",
+  "repository": "https://github.com/alocke12992/GraphQL-Authentication.git",
+  "author": "Andrew Locke <alocke12992@gmail.com>",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
